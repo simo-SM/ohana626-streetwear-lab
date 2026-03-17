@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | OHANA 626</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Inter:wght@300;400;900&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { 
+                        sans: ['Inter', 'sans-serif'], 
+                        display: ['Syncopate', 'sans-serif'] 
+                    },
+                    colors: { 
+                        stitch: { 
+                            deep: '#010409', 
+                            main: '#0d1117', 
+                            blue: '#00a3ff', 
+                            glass: 'rgba(13, 17, 23, 0.8)'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { 
+            background-color: #010409;
+            color: white; 
+            overflow-x: hidden; 
+        }
+        .neon-text { 
+            text-shadow: 0 0 20px rgba(0, 163, 255, 0.5); 
+        }
+        .glass-card { 
+            background: rgba(255, 255, 255, 0.02); 
+            backdrop-filter: blur(10px); 
+            border: 1px solid rgba(255, 255, 255, 0.05); 
+        }
+        .reveal { opacity: 0; 
+            transform: translateY(30px);
+             
+        }
+        #bgmobile {
+            display: none;
+        }
+        @media screen and (min-width: 1024px) {
+            .neon-text {
+                font-size: 80px !important;
+            }
+            #Hero h1 {
+                font-size: 120px !important;
+            }
+            #bgmobile {
+                display: none;
+            }
+            
+        }
+        @media screen and (min-width: 991px){
+            .neon-text {
+                font-size: 12vw !important;
+            }
+            #Hero h1 {
+                font-size: 9vw !important;
+            }
+            #bgmobile {
+                display: none;
+            }
+            
+        }
+        @media screen and (min-width: 769px) {
+            #bgDesktop {
+                display: block;
+            }
+            
+        }
+        @media (max-width: 768px) {
+            .neon-text {
+                font-size: 12vw !important;
+            }
+            #Hero h1 {
+                font-size: 10vw !important;
+            }
+            #bgmobile {
+                display: block;
+                width: 100%;
+                height: 100%;
+               object-fit: cover;
+               position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -1;
+            }
+            #bgDesktop {
+                display: none;
+            }
+            
+        }
+        @media (max-width: 480px) {
+            .neon-text {
+                font-size: 14vw !important;
+            }
+            #Hero h1 {
+                font-size: 12vw !important;
+            }
+            #bgmobile {
+                display: block;
+                width: 100%;
+                height: 100%;
+               object-fit: cover;
+               position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -1;
+            }
+        }
+        
+    </style>
+</head>
+<body class="font-sans">
+
+    <header class="fixed top-0 left-0 w-full z-[100] py-6 px-6 lg:px-12 flex justify-between items-center bg-stitch-deep/80 backdrop-blur-md border-bottom border-white/5">
+        <div class="font-display font-bold text-xl tracking-tighter">
+            <a href="index1.html">OHANA<span class="text-stitch-blue">626</span></a>
+        </div>
+        <nav class="hidden md:flex gap-10">
+            <a href="./index1.html" class="text-[10px] font-display tracking-widest hover:text-stitch-blue transition-colors">Collection</a>
+            <a href="./about.html" class="text-[10px] font-display tracking-widest hover:text-stitch-blue transition-colors">About</a>
+            <a href="./contact.html" class="text-[10px] font-display tracking-widest hover:text-stitch-blue transition-colors">Contact</a>
+        </nav>
+        <a href="index1.html" class="text-[10px] font-display border border-white/20 px-4 py-2 rounded-full hover:bg-white hover:text-black transition-all">BACK HOME</a>
+    </header>
+
+    <mainc class="pt-32 pb-20">
+        <div class="container mx-auto px-6">
+            <!-- Hero Section --> 
+            <div id="Hero" class="relative w-full h-screen overflow-hidden">
+                <img id="bgDesktop" src="./images/aboutBg.png" 
+                     alt="About Background" 
+                     class="absolute inset-0 w-full h-full object-cover grayscale-[0.3] brightness-[0.6]">
+                <img id="bgmobile" src="./images/bgABOUTmobile.jpeg" alt="">
+                <div class="relative z-10 flex flex-col items-center justify-center h-full text-center px-6">
+                    <h1 class="reveal font-display text-6xl md:text-[120px] font-black leading-none tracking-tighter mb-6 neon-text">
+                        WE ARE <br>
+                        <span class="text-stitch-blue">EXPERIMENT 626.</span>
+                    </h1>
+                    
+                    <p class="reveal text-gray-300 text-lg md:text-2xl max-w-3xl leading-relaxed font-light mt-4">
+                        Founded in 2026, OHANA 626 is more than a streetwear brand. 
+                        It's a genotype of urban culture.
+                    </p>
+                </div>
+            
+                <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce opacity-50">
+                    <i class="fa-solid fa-chevron-down text-2xl"></i>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-32">
+                <div class="reveal glass-card p-10 rounded-2xl text-center" style="transition-delay: 200ms;">
+                    <h3 class="font-display text-stitch-blue text-3xl mb-2">01</h3>
+                    <p class="text-[10px] tracking-[0.3em] text-gray-500 uppercase">Premium Quality</p>
+                    <p class="mt-4 text-sm text-gray-400 text-light leading-relaxed">Sourced from the finest heavyweight fabrics for maximum durability.</p>
+                </div>
+                <div class="reveal glass-card p-10 rounded-2xl text-center" style="transition-delay: 400ms;">
+                    <h3 class="font-display text-stitch-blue text-3xl mb-2">02</h3>
+                    <p class="text-[10px] tracking-[0.3em] text-gray-500 uppercase">Limited Genotypes</p>
+                    <p class="mt-4 text-sm text-gray-400 text-light leading-relaxed">Every drop is unique. Once it's gone, it evolves into history.</p>
+                </div>
+                <div class="reveal glass-card p-10 rounded-2xl text-center" style="transition-delay: 600ms;">
+                    <h3 class="font-display text-stitch-blue text-3xl mb-2">03</h3>
+                    <p class="text-[10px] tracking-[0.3em] text-gray-500 uppercase">Urban Ethos</p>
+                    <p class="mt-4 text-sm text-gray-400 text-light leading-relaxed">Designed for those who find beauty in the chaos of the city.</p>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row items-center gap-16 reveal">
+                <div class="w-full md:w-1/2">
+                    <img src="./images/pac2.jpeg" class="w-full rounded-2xl grayscale opacity-50 hover:grayscale-0 transition-all duration-700 shadow-2xl shadow-stitch-blue/10" alt="Vision">
+                </div>
+                <div class="w-full md:w-1/2">
+                    <h2 class="font-display text-3xl font-bold mb-6">OUR <span class="text-stitch-blue">VISION</span></h2>
+                    <p class="text-gray-400 leading-loose mb-6">
+                        In a world of fast fashion, we choose slow evolution. We believe that clothing is a protective layer for the modern experimenter. 
+                        Every stitch is calculated, every fit is tested in the urban laboratory.
+                    </p>
+                    <div class="h-[1px] w-20 bg-stitch-blue mb-6"></div>
+                    <p class="font-display text-[10px] tracking-[0.5em] text-gray-500">EXPERIMENTING SINCE 2026</p>
+                </div>
+            </div>
+        </div>
+    </mainc>
+
+    <footer class="border-t border-white/5 py-12 text-center">
+        <p class="font-display text-gray-600 text-[10px] tracking-[0.5em] uppercase">© 2026 OHANA 626. ALOHA CHAOS.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Animation for revealing elements
+            anime({
+                targets: '.reveal',
+                opacity: [0, 1],
+                translateY: [30, 0],
+                delay: anime.stagger(200),
+                duration: 1200,
+                easing: 'easeOutExpo'
+            });
+    });
+    </script>
+    
+</body>
+</html>

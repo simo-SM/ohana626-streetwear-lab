@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | OHANA 626</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Inter:wght@300;400;900&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { 
+                        sans: ['Inter', 'sans-serif'], 
+                        display: ['Syncopate', 'sans-serif'] 
+                    },
+                    colors: { 
+                        stitch: { 
+                            deep: '#010409', 
+                            main: '#0d1117', 
+                            blue: '#00a3ff', 
+                            pink: '#ff4d6d'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { background-color: #010409; color: white; overflow-x: hidden; font-family: 'Inter', sans-serif; }
+        .neon-text { text-shadow: 0 0 20px rgba(0, 163, 255, 0.5); }
+        .glass-input { 
+            background: rgba(255, 255, 255, 0.03); 
+            backdrop-filter: blur(10px); 
+            border: 1px solid rgba(255, 255, 255, 0.08); 
+            transition: all 0.3s ease;
+        }
+        .glass-input:focus {
+            border-color: #00a3ff;
+            background: rgba(0, 163, 255, 0.05);
+            box-shadow: 0 0 15px rgba(0, 163, 255, 0.1);
+        }
+        .reveal { 
+            opacity: 0; 
+            transform: translateY(20px); 
+        }
+        #hero-title{
+            justify-content: center;
+        }
+        @media screen and (max-width: 1024px) {
+            #hero-title {
+                font-size: 14vw !important;
+            }
+            
+        }
+        @media (max-width: 768px) {
+            #hero-title {
+                font-size: 12vw !important;
+            }
+
+            
+        }
+        @media screen and (max-width: 480px) {
+            #hero-title {
+                font-size: 14vw !important;
+            }
+
+            
+        }
+    </style>
+</head>
+<body>
+
+    <header class="fixed top-0 left-0 w-full z-[100] py-6 px-6 lg:px-12 flex justify-between items-center bg-stitch-deep/80 backdrop-blur-md border-b border-white/5">
+        <div class="font-display font-bold text-xl tracking-tighter">
+            <a href="index1.html">OHANA<span class="text-stitch-blue">626</span></a>
+        </div>
+        <nav class="hidden md:flex gap-10">
+            <a href="index1.html" class="text-[10px] font-display tracking-widest hover:text-stitch-blue transition-colors uppercase">Collection</a>
+            <a href="about.html" class="text-[10px] font-display tracking-widest hover:text-stitch-blue transition-colors uppercase">About</a>
+            <a href="contact.html" class="text-[10px] font-display tracking-widest text-stitch-blue transition-colors uppercase">Contact</a>
+        </nav>
+        <div class="flex items-center gap-4">
+             <a href="index2.html" class="text-[9px] font-display border border-white/20 px-4 py-2 rounded-full hover:bg-white hover:text-black transition-all">BACK TO STORE</a>
+        </div>
+    </header>
+
+    <main>
+        
+        <section id="Hero" class="relative w-full h-screen overflow-hidden flex items-center justify-center">
+            
+            <img src="./images/contactBg.png" 
+                 alt="Contact Background" 
+                 class="absolute inset-0 w-full h-full object-cover grayscale-[0.3] brightness-[0.4]">
+            
+            <div class="absolute inset-0 flex items-center justify-center overflow-hidden pointer-events-none">
+                <h1 class="font-display font-black text-white/[0.02] leading-none select-none tracking-tighter uppercase" 
+                    style="font-size: 100vw; white-space: nowrap;">
+                    626
+                </h1>
+            </div>
+
+            <div class="relative z-10 flex flex-col items-center text-center px-6">
+                <h1 id="hero-title" class="reveal font-display text-6xl md:text-[150px] font-black leading-none tracking-tighter mb-6 neon-text uppercase">
+                    Start the <br>
+                    <span class="text-stitch-blue">Protocol.</span>
+                </h1>
+                
+                <p class="reveal text-gray-400 text-lg md:text-2xl max-w-3xl leading-relaxed font-light mt-4 tracking-[0.4em] uppercase">
+                    Communication Line Open
+                </p>
+            </div>
+
+            <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce opacity-50">
+                <i class="fa-solid fa-chevron-down text-2xl"></i>
+            </div>
+
+            <div class="absolute bottom-0 left-0 w-full h-40 bg-gradient-to-t from-[#010409] to-transparent"></div>
+        </section>
+
+        <section class="relative z-20 py-32 bg-[#010409]">
+            <div class="container mx-auto px-6">
+                <div class="max-w-6xl mx-auto">
+                    
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-20">
+                        
+                        <div class="lg:col-span-4 space-y-16">
+                            <div>
+                                <h3 class="text-stitch-blue font-display text-[10px] tracking-[0.4em] uppercase mb-6">Base Operations</h3>
+                                <p class="text-gray-300 text-base leading-relaxed">
+                                    Casablanca, Morocco<br>
+                                    District 626 Laboratory
+                                </p>
+                            </div>
+
+                            <div>
+                                <h3 class="text-stitch-blue font-display text-[10px] tracking-[0.4em] uppercase mb-6">Direct Frequency</h3>
+                                <div class="space-y-4">
+                                    <a href="https://wa.me/212608173585" class="flex items-center gap-4 text-gray-400 hover:text-white transition-colors group">
+                                        <i class="fab fa-whatsapp text-xl group-hover:text-stitch-blue"></i>
+                                        <span class="text-sm font-medium tracking-wider">+212 6XX XXX XXX</span>
+                                    </a>
+                                    <a href="mailto:lab@ohana626.com" class="flex items-center gap-4 text-gray-400 hover:text-white transition-colors group">
+                                        <i class="far fa-envelope text-xl group-hover:text-stitch-blue"></i>
+                                        <span class="text-sm font-medium tracking-wider">lab@ohana626.com</span>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div>
+                                <h3 class="text-stitch-blue font-display text-[10px] tracking-[0.4em] uppercase mb-6">Social Synapse</h3>
+                                <div class="flex gap-4">
+                                    <a href="#" class="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center hover:bg-stitch-blue hover:text-black transition-all">
+                                        <i class="fab fa-instagram text-lg"></i>
+                                    </a>
+                                    <a href="#" class="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center hover:bg-stitch-blue hover:text-black transition-all">
+                                        <i class="fab fa-tiktok text-lg"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="lg:col-span-8">
+                            <form id="contactForm" class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                <div class="md:col-span-1">
+                                    <label class="block text-[10px] text-gray-600 tracking-[0.2em] uppercase mb-3 ml-2">Subject Name</label>
+                                    <input type="text" id="contactName" placeholder="TYPE YOUR NAME..." 
+                                           class="glass-input w-full px-8 py-6 rounded-2xl text-sm focus:outline-none focus:ring-1 focus:ring-stitch-blue/40 text-white placeholder:text-gray-700 transition-all">
+                                </div>
+                                <div class="md:col-span-1">
+                                    <label class="block text-[10px] text-gray-600 tracking-[0.2em] uppercase mb-3 ml-2">Encryption Email</label>
+                                    <input type="email" id="contactEmail" placeholder="YOUR@EMAIL.COM"
+                                           class="glass-input w-full px-8 py-6 rounded-2xl text-sm focus:outline-none focus:ring-1 focus:ring-stitch-blue/40 text-white placeholder:text-gray-700 transition-all">
+                                </div>
+                                <div class="md:col-span-2">
+                                    <label class="block text-[10px] text-gray-600 tracking-[0.2em] uppercase mb-3 ml-2">Transmission Message</label>
+                                    <textarea id="contactMessage" rows="6" placeholder="ESTABLISHING CONNECTION..."
+                                              class="glass-input w-full px-8 py-6 rounded-2xl text-sm focus:outline-none focus:ring-1 focus:ring-stitch-blue/40 text-white placeholder:text-gray-700 resize-none transition-all"></textarea>
+                                </div>
+                                <div class="md:col-span-2">
+                                    <button type="submit" 
+                                            class="w-full bg-stitch-blue text-black font-display text-[11px] font-black tracking-[0.5em] py-7 rounded-2xl hover:shadow-[0_0_40px_rgba(0,163,255,0.4)] hover:scale-[1.01] transition-all active:scale-[0.98] uppercase">
+                                        Send Transmission
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="border-t border-white/5 py-12 text-center">
+        <p class="font-display text-gray-600 text-[10px] tracking-[0.5em] uppercase">© 2026 OHANA 626. SYSTEM SECURED.</p>
+    </footer>
+
+   <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Entrance Animations
+            anime({
+                targets: '.reveal',
+                opacity: [0, 1],
+                translateY: [20, 0],
+                delay: anime.stagger(200),
+                duration: 1000,
+                easing: 'easeOutExpo'
+            });
+
+            // Form Submit Effect (Simple logic)
+            const form = document.getElementById('contactForm');
+            form.onsubmit = (e) => {
+                e.preventDefault();
+                const btn = form.querySelector('button');
+                btn.innerHTML = 'TRANSMITTING...';
+                btn.style.opacity = '0.7';
+
+                setTimeout(() => {
+                    btn.innerHTML = 'MESSAGE RECEIVED';
+                    btn.classList.replace('bg-stitch-blue', 'bg-green-500');
+                    form.reset();
+                }, 1500);
+            };
+        });
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+                e.preventDefault(); // Bach l-page mat-dirch refresh
+
+                // 1. Qbd l-data mn l-inputs
+                const name = document.getElementById('contactName').value;
+                const email = document.getElementById('contactEmail').value;
+                const userMsg = document.getElementById('contactMessage').value;
+                const phone = "212608173585"; // R-rqm dialek
+
+                // 2. Validation sghira
+                if (!name || !userMsg) {
+                    alert("3afak 3mmr smiya u l-message!");
+                    return;
+                }
+            
+                // 3. Gad l-message (Style "Base Operations")
+                let whatsappMsg = ` *NEW TRANSMISSION*\n`;
+                whatsappMsg += `--------------------------\n`;
+                whatsappMsg += `From: ${name}\n`;
+                whatsappMsg += `Email: ${email}\n`;
+                whatsappMsg += `--------------------------\n`;
+                whatsappMsg += `Message:\n${userMsg}\n`;
+                whatsappMsg += `--------------------------\n`;
+                whatsappMsg += `End of Transmission.`;
+            
+                // 4. Sift l-WhatsApp
+                const finalUrl = `https://wa.me/${phone}?text=${encodeURIComponent(whatsappMsg)}`;
+                window.open(finalUrl, '_blank');
+    });
+
+
+   </script>
+    
+</body>
+</html>
