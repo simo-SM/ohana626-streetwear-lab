@@ -275,7 +275,7 @@ function openProduct(index) {
 
 // --- GO BACK ---
 function goBack() {
-    document.getElementById('index1').style.display = 'none';
+    document.getElementById('index').style.display = 'none';
     document.getElementById('page1').style.display = 'block';
     window.scrollTo(0, 0);
 }
@@ -376,7 +376,6 @@ function initStackingEffect() {
                 });
             }
 
-            // منطق الـ Stacking: إلا سكروليتي للي تاحتها، اللي فوق منها كتصغار
             if (!entry.isIntersecting && entry.boundingClientRect.top < 0) {
                 entry.target.classList.add('is-covered');
             } else {
